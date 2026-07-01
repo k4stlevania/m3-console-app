@@ -34,9 +34,6 @@ function searchByAuthor(authorName){
    return authorBooks;
 }
 // checkea si un libro ya existe por su codigo isbn
-function booksExist(isbn){
+function isbnExist(isbn){
     const bookExist = books.some((book) => String(isbn) === String(book.isbn));
-    if(bookExist){
-        throw new Error("Error ese libro ya existe en la libreria")
-    }
 }
