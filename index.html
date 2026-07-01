@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Biblioteca ABP</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">📚 Gestión de Biblioteca ABP</span>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Alertas de validación / feedback -->
+    <div id="alertas"></div>
+
+    <div class="row">
+      <!-- FORMULARIO -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Agregar libro</h5>
+            <form id="form-libro">
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Ej: Cien años de soledad" />
+              </div>
+
+              <div class="mb-3">
+                <label for="autor" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="autor" placeholder="Ej: Gabriel García Márquez" />
+              </div>
+
+              <div class="mb-3">
+                <label for="anio" class="form-label">Año de publicación</label>
+                <input type="number" class="form-control" id="anio" placeholder="Ej: 1967" />
+              </div>
+
+              <div class="mb-3">
+                <label for="isbn" class="form-label">ISBN</label>
+                <input type="text" class="form-control" id="isbn" placeholder="Código único" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="disponible" checked />
+                <label class="form-check-label" for="disponible">Disponible</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">Agregar libro</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- FILTRO / BÚSQUEDA -->
+        <div class="card shadow-sm mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Buscar por autor</h5>
+            <div class="input-group">
+              <input type="text" id="filtro-autor" class="form-control" placeholder="Nombre del autor" />
+              <button class="btn btn-outline-secondary" id="btn-buscar">Buscar</button>
+              <button class="btn btn-outline-danger" id="btn-limpiar">Limpiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLA DE LIBROS -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Catálogo de libros
+              <span class="badge bg-secondary" id="contador-libros">0</span>
+            </h5>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Año</th>
+                    <th>ISBN</th>
+                    <th>Disponible</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-libros">
+                  <!-- Filas generadas dinámicamente con JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (bundle incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts propios (orden importa) -->
+  <script src="js/libro.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
