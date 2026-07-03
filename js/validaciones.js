@@ -1,14 +1,11 @@
 // funcion para validar los datos del libro
-function validateBook(title, author, pages, year, isbn){
+function validateBook(title, author, year, isbn){
     // validaciones de informacion basicas
-    if(!titulo || titulo.trim() === ""){
+    if(!title || title.trim() === ""){
         return "El titulo es obligatorio";
     }
     if(!author || author.trim() === ""){
         return "El autor es obligatorio";
-    }
-    if(!pages || isNaN(pages)){
-        return "El numero de pagina es obligatorio";
     }
     if(!year || isNaN(year)){
         return "El año debe ser un numero valido";

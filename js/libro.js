@@ -2,11 +2,10 @@
 let books = [];
 
 // Crea un objeto de libro
-function crearLibro(title, author, pages, year, isbn, available = true){
+function crearLibro(title, author, year, isbn, available = true){
     return {
         title,
-        autor,
-        pages,
+        author,
         year : Number(year),
         isbn,
         available

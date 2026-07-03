@@ -3,7 +3,7 @@
     para mostrarlos en el lado del cliente
 */
 
-function renderBooks(booklist = libros) {
+function renderBooks(booklist = books) {
     const tableBody = document.querySelector('#tabla-libros');
     const bookCounter = document.querySelector("#contador-libros");
 
@@ -16,22 +16,22 @@ function renderBooks(booklist = libros) {
         }
 
         row.innerHTML = `
-        <td>book.title</td>
-        <td>book.author</td>
-        <td>book.title</td>
-        <td>book.title</td>
-        <td>book.isbn</td>
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.year}</td>
+        <td>${book.isbn}</td>
+        <td>${book.available}</td>
 
         <td>
-            <span class="badge ${libro.disponible ? "bg-success" : "bg-danger"}">
-            ${libro.disponible ? "Sí" : "No"}
+            <span class="badge ${book.disponible ? "bg-success" : "bg-danger"}">
+            ${book.disponible ? "Sí" : "No"}
             </span>
         </td>
-        td>
-        <button class="btn btn-sm btn-outline-warning btn-toggle" data-isbn="${libro.isbn}">
+        <td>
+        <button class="btn btn-sm btn-outline-warning btn-toggle" data-isbn="${book.isbn}">
           Cambiar estado
         </button>
-        <button class="btn btn-sm btn-outline-danger btn-eliminar" data-isbn="${libro.isbn}">
+        <button class="btn btn-sm btn-outline-danger btn-eliminar" data-isbn="${book.isbn}">
           Eliminar
         </button>
       </td>
@@ -40,3 +40,22 @@ function renderBooks(booklist = libros) {
     }
     bookCounter.textContent = booklist.length;
 }
+
+function showAlert(mensaje, tipo = "success") {
+    const contenedor = document.getElementById("alertas");
+    const alerta = document.createElement("div");
+    alerta.className = `alert alert-${tipo} alert-dismissible fade show`;
+    alerta.role = "alert";
+    alerta.innerHTML = `
+    ${mensaje}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  `;
+    contenedor.appendChild(alerta);
+
+    // Se auto-elimina después de unos segundos
+    setTimeout(() => alerta.remove(), 4000);
+}
+function limpiarFormulario() {
+  document.getElementById("form-libro").reset();
+}
+ 
