@@ -64,7 +64,7 @@ de "Eliminar" y "Cambiar estado" generados dinámicamente.
 
 ### Capturas
 
-!(./img/Screenshot_20260702_211849.png)
+(./img/Screenshot_20260702_211849.png)
 
 ### Posibles mejoras futuras
 
