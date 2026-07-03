@@ -56,9 +56,9 @@ de "Eliminar" y "Cambiar estado" generados dinámicamente.
 🛠️ Tecnologías
 
 
-HTML5
-CSS3 + Bootstrap 5.3
-JavaScript (ES6)
+- HTML5
+- CSS3 + Bootstrap 5.3
+- JavaScript (ES6)
 
 
 📸 Capturas
