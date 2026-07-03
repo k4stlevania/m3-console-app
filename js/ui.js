@@ -23,8 +23,8 @@ function renderBooks(booklist = books) {
         
 
         <td>
-            <span class="badge ${book.disponible ? "bg-success" : "bg-danger"}">
-            ${book.disponible ? "Sí" : "No"}
+            <span class="badge ${book.available ? "bg-success" : "bg-danger"}">
+            ${book.available ? "Sí" : "No"}
             </span>
         </td>
         <td>
