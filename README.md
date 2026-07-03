@@ -64,8 +64,7 @@ de "Eliminar" y "Cambiar estado" generados dinámicamente.
 
 ### Capturas
 
-(Agregar aquí capturas de pantalla del formulario y la tabla en
-funcionamiento antes de la entrega).
+!(./img/Screenshot_20260702_211849.png)
 
 ### Posibles mejoras futuras
 
