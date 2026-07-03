@@ -1,4 +1,4 @@
-// funcion para validar el libro
+// funcion para validar los datos del libro
 function validateBook(title, author, pages, year, isbn){
     // validaciones de informacion basicas
     if(!titulo || titulo.trim() === ""){
@@ -25,6 +25,6 @@ function validateBook(title, author, pages, year, isbn){
     if(isbnExist(isbn.trim())){
         return `Libro con ISBN ${isbn} ya existe`;
     }
-
+    // retorna null si no hay errores
     return null;
 }
