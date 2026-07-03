@@ -1,11 +1,11 @@
-## ABP modulo 3
-###📚 Sistema de Gestión de Biblioteca
+# ABP modulo 3
+## Sistema de Gestión de Biblioteca
 
 Aplicación web simple para gestionar un catálogo de libros: agregar, eliminar,
 buscar por autor y controlar disponibilidad. Desarrollada con HTML,
 JavaScript (ES6) y Bootstrap 5.
 
-### 🚀 Cómo ejecutarlo
+## Cómo ejecutarlo
 
 
 Descarga o clona la carpeta del proyecto.
@@ -14,7 +14,7 @@ Abre el archivo index.html directamente en tu navegador
 No requiere instalación ni servidor: todo funciona del lado del cliente.
 
 
-### 🗂️ Estructura del proyecto
+## Estructura del proyecto
 
 ```
 gestion-biblioteca/
@@ -29,23 +29,23 @@ gestion-biblioteca/
 │   └── main.js           # Conexión de eventos del formulario y tabla
 └── README.md
 ```
-### ✨ Funcionalidades
+## Funcionalidades
 
 
-Agregar libro: formulario con título, autor, año, ISBN y disponibilidad.
-Eliminar libro: botón por fila en la tabla.
-Cambiar disponibilidad: alterna entre "Sí" / "No" con un clic.
-Buscar por autor: filtro en tiempo real sobre el catálogo.
-Validaciones: evita campos vacíos, años inválidos e ISBN duplicados.
-Feedback visual: alertas de éxito/error con Bootstrap.
+- Agregar libro: formulario con título, autor, año, ISBN y disponibilidad.
+- Eliminar libro: botón por fila en la tabla.
+- Cambiar disponibilidad: alterna entre "Sí" / "No" con un clic.
+- Buscar por autor: filtro en tiempo real sobre el catálogo.
+- Validaciones: evita campos vacíos, años inválidos e ISBN duplicados.
+- Feedback visual: alertas de éxito/error con Bootstrap.
 
 
-### 🧠 Decisiones de diseño
+## Decisiones de diseño
 
 
-Se usó un arreglo de objetos (libros) como única fuente de verdad
+Se usó un arreglo de objetos (books) como única fuente de verdad
 del estado de la aplicación.
-Todas las variables se declaran con let o const (nunca var),
+Todas las variables se declaran con let o const ,
 respetando el alcance de bloque de ES6.
 La lógica se separó en 4 archivos según responsabilidad (datos,
 validación, interfaz, eventos) para mantener el código organizado y
@@ -54,7 +54,7 @@ Se usó delegación de eventos en la tabla para manejar los botones
 de "Eliminar" y "Cambiar estado" generados dinámicamente.
 
 
-### 🛠️ Tecnologías
+### Tecnologías
 
 
 - HTML5
@@ -62,18 +62,18 @@ de "Eliminar" y "Cambiar estado" generados dinámicamente.
 - JavaScript (ES6)
 
 
-### 📸 Capturas
+### Capturas
 
 (Agregar aquí capturas de pantalla del formulario y la tabla en
 funcionamiento antes de la entrega).
 
-### ✅ Posibles mejoras futuras
+### Posibles mejoras futuras
 
 
-Persistencia de datos con localStorage.
-Edición de un libro existente (no solo eliminar/agregar).
-Ordenar la tabla por columna (título, autor, año).
-Paginación si el catálogo crece mucho.
+- Persistencia de datos con localStorage.
+- Edición de un libro existente (no solo eliminar/agregar).
+- Ordenar la tabla por columna (título, autor, año).
+- Paginación si el catálogo crece mucho.
 
 
 ### Link a repositorio
