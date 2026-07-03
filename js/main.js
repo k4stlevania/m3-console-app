@@ -28,4 +28,33 @@ document.addEventListener("DOMContentLoaded", () => {
         showAlert("Libro agregado correctamente.", "success");
     }
     )
+
+    tabla.addEventListener("click",(e)=>{
+        const isbn = e.target.dataset.isbn;
+        if(!isbn) return;
+
+        if(e.target.classList.contains("btn-eliminar")){
+            deleteBook(isbn);
+            renderBooks();
+            showAlert("libro eliminado", "warning");
+        }
+        if(e.target.classList.contains("btn-toggle")){
+            changeAvailability(isbn);
+            renderBooks();
+        }
+    })
+    btnBuscar.addEventListener("click", ()=>{
+        const termino = document.getElementById("filtro-autor").value;
+        if(termino.trim() === ""){
+            renderBooks();
+            return;
+        }
+        const result = searchByAuthor(termino);
+        renderBooks(result);
+    });
+
+    btnLimpiar.addEventListener("click", ()=>{
+        document.getElementById("filtro-autor").value = "";
+        renderBooks();
+    })
 })

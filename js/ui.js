@@ -20,7 +20,7 @@ function renderBooks(booklist = books) {
         <td>${book.author}</td>
         <td>${book.year}</td>
         <td>${book.isbn}</td>
-        <td>${book.available}</td>
+        
 
         <td>
             <span class="badge ${book.disponible ? "bg-success" : "bg-danger"}">
