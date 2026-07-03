@@ -40,7 +40,7 @@ function renderBooks(booklist = books) {
     }
     bookCounter.textContent = booklist.length;
 }
-
+// muestra alertas dependiendo del contexto que queramos
 function showAlert(mensaje, tipo = "success") {
     const contenedor = document.getElementById("alertas");
     const alerta = document.createElement("div");
@@ -55,7 +55,7 @@ function showAlert(mensaje, tipo = "success") {
     // Se auto-elimina después de unos segundos
     setTimeout(() => alerta.remove(), 4000);
 }
-function limpiarFormulario() {
+function cleanFormulary() {
   document.getElementById("form-libro").reset();
 }
  

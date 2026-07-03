@@ -70,7 +70,7 @@ de "Eliminar" y "Cambiar estado" generados dinámicamente.
 ### Posibles mejoras futuras
 
 
-- Persistencia de datos con localStorage.
+- Persistencia de datos con localStorage o Base de datos.
 - Edición de un libro existente (no solo eliminar/agregar).
 - Ordenar la tabla por columna (título, autor, año).
 - Paginación si el catálogo crece mucho.

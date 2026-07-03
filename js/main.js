@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("form-libro");
     const tabla = document.getElementById("tabla-libros");
-    const btnBuscar = document.getElementById("btn-buscar");
-    const btnLimpiar = document.getElementById("btn-limpiar");
+    const btnSearch = document.getElementById("btn-buscar");
+    const btnWipe = document.getElementById("btn-limpiar");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
             showAlert(errorExist, "danger")
             return;
         }
-        const nuevoLibro = crearLibro(title, author, year, isbn, available);
+        const nuevoLibro = createBook(title, author, year, isbn, available);
         addBook(nuevoLibro);
         renderBooks();
-        limpiarFormulario();
+        cleanFormulary();
         showAlert("Libro agregado correctamente.", "success");
     }
     )
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             renderBooks();
         }
     })
-    btnBuscar.addEventListener("click", ()=>{
+    btnSearch.addEventListener("click", ()=>{
         const termino = document.getElementById("filtro-autor").value;
         if(termino.trim() === ""){
             renderBooks();
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderBooks(result);
     });
 
-    btnLimpiar.addEventListener("click", ()=>{
+    btnWipe.addEventListener("click", ()=>{
         document.getElementById("filtro-autor").value = "";
         renderBooks();
     })
